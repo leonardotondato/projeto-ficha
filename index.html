@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFichas</title>
+
+    <!-- Style Sheets -->
+    
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Scripts -->
+
+    <script src="scripts/main.js"></script>
+
+</head>
+<body>
+    
+    <menu class="content">
+        
+        <form id="charInfo" name="charInfo" action="#">
+            <section class="fSection">
+                <label for="charName">Nome</label>
+                <input type="text" id="charName" name="charName">
+            </section>
+
+            <section class="sSection">
+                <div>
+                    <label for="race">Raça</label>
+                    <select name="race" id="race" required>
+                        <option value="race_void">--escolher</option>
+                        <option value="Humano">Humano</option>
+                        <option value="Elfo">Elfo</option>
+                        <option value="Anão">Anão</option>
+                        <option value="Orc">Orc</option>
+                        <option value="Draconato">Draconato</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="class">Classe</label>
+                    <select name="class" id="class" required>
+                        <option value="class_void">--escolher</option>
+                        <option value="Bardo">Bardo</option>
+                        <option value="Bárbaro">Bárbaro</option>
+                        <option value="Clérigo">Clérigo</option>
+                        <option value="Druida">Druida</option>
+                        <option value="Guerreiro">Guerreiro</option>
+                        <option value="Monge">Monge</option>
+                        <option value="Paladino">Paladino</option>
+                        <option value="Patrulheiro">Patrulheiro</option>
+                        <option value="Ladino">Ladino</option>
+                        <option value="Feiticeiro">Feiticeiro</option>
+                        <option value="Bruxo">Bruxo</option>
+                        <option value="Mago">Mago</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="background">Antecedente</label>
+                    <select name="background" id="background" required>
+                        <option value="bg_void">--escolher</option>
+                        <option value="Acólito">Acólito</option>
+                        <option value="Soldado">Soldado</option>
+                        <option value="Eremita">Eremita</option>
+                        <option value="Sábio">Sábio</option>
+                        <option value="Assombrado">Assombrado</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="level">Nível</label>
+                    <select name="level" id="level">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </section>
+
+            <div class="division-line">
+                <div class="line"></div>
+            </div>
+
+            <section class="tSection">
+                <div class="attributes">
+                    <table>
+                        <tr>
+                            <td class="attr_cell">Força</td>
+                            <td class="attr_cell">Destreza</td>
+                            <td class="attr_cell">Constituição</td>
+                            <td class="attr_cell">Inteligência</td>
+                            <td class="attr_cell">Sabedoria</td>
+                            <td class="attr_cell">Carisma</td>
+                        </tr>
+                        <tr>
+                            <td class="attr_cell">
+                                <input id="str_score" class="attr_value" type="number">
+                            </td>
+                            <td class="attr_cell">
+                                <input id="dex_score" class="attr_value" type="number">
+                            </td>
+                            <td class="attr_cell">
+                                <input id="con_score" class="attr_value" type="number">
+                            </td>
+                            <td class="attr_cell">
+                                <input id="int_score" class="attr_value" type="number">
+                            </td>
+                            <td class="attr_cell">
+                                <input id="wis_score" class="attr_value" type="number">
+                            </td>
+                            <td class="attr_cell">
+                                <input id="cha_score" class="attr_value" type="number">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <div class="division-line">
+                <div class="line"></div>
+            </div>
+
+            <section class="foSection">
+                <input type="submit" nome="submit" onclick="infoSave()">
+            </section>
+
+        </form>
+
+    </menu>
+
+</body>
+</html>
