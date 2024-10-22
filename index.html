@@ -8,6 +8,7 @@
     <!-- Style Sheets -->
     
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/miniatures.css">
 
     <!-- Scripts -->
 
@@ -144,7 +145,108 @@
 
         </form>
 
+        <form action="">
+            <label for="fichaSelect">Selecionar Personagem: </label>
+            <select name="fichaSelect" id="fichaSelect">
+                <option value="">Selecionar...</option>
+            </select>
+        </form>
+
+        <div id="dataDetails"></div>
+
+        <script src="scripts/app.js"></script>
+
     </menu>
+
+    <div class="new-sheets">
+        <section class="mini-content">
+        
+            <div class="box1">
+
+                <div class="name-exib">
+
+                    <p id="pc-name" class="nameText">Leonardo</p>
+
+                </div>
+
+                <div class="rcl-exib">
+
+                    <p id="race-name" class="subtext">Elfo</p>
+                    <p id="class-name" class="subtext">Bardo</p>
+                    <p id="char-level" class="subtext">15</p>
+
+                </div>
+
+                <div class="bg-exib">
+
+                    <p id="bg-name" class="subtext">Eremita</p>
+
+                </div>
+
+            </div>
+
+            <div class="box2">
+
+                <div class="column1">
+
+                    <div class="attrb-box">
+
+                        <p class="attrb-text">FOR</p>
+
+                        <p id="str_value" class="attrb-num">X</p>
+
+                    </div>
+
+                    <div class="attrb-box">
+
+                        <p class="attrb-text">DES</p>
+
+                        <p id="dex_value" class="attrb-num">X</p>
+
+                    </div>
+
+                    <div class="attrb-box">
+
+                        <p class="attrb-text">CON</p>
+
+                        <p id="con_value" class="attrb-num">X</p>
+
+                    </div>
+
+                </div>
+
+                <div class="column2">
+
+                    <div class="attrb-box">
+
+                        <p class="attrb-text">INT</p>
+
+                        <p id="int_value" class="attrb-num">X</p>
+
+                    </div>
+
+                    <div class="attrb-box">
+
+                        <p class="attrb-text">SAB</p>
+
+                        <p id="wis_value" class="attrb-num">X</p>
+
+                    </div>
+
+                    <div class="attrb-box">
+
+                        <p class="attrb-text">CAR</p>
+
+                        <p id="cha_value" class="attrb-num">X</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
 
 </body>
 </html>
