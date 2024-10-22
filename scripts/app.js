@@ -61,5 +61,38 @@ document.getElementById('fichaSelect').addEventListener('change', async function
     }
 });
 
+document.getElementById('deleteButton').addEventListener('click', async function() {
+    const dropdown = document.getElementById('fichaSelect');
+    const selectedId = dropdown.value;
+
+    if (!selectedId) {
+        alert('Selecione um usuário para deletar');
+        return;
+    }
+
+    const confirmDelete = confirm('Tem certeza que deseja deletar este usuário?');
+    if (!confirmDelete) {
+        return;
+    }
+
+    try {
+        const response = await fetch(`http://localhost:3000/delete-data/${selectedId}`, {
+            method: 'DELETE',
+        });
+
+        if (response.ok) {
+            alert('Usuário deletado com sucesso');
+            loadDropdown(); // Recarrega o dropdown após a deleção
+        } else {
+            const errorData = await response.json();
+            alert(`Erro ao deletar o usuário: ${errorData.error}`);
+        }
+    } catch (error) {
+        console.error('Erro ao deletar o usuário:', error);
+        alert('Erro ao deletar o usuário');
+    }
+});
+
+
 // Carregar o dropdown ao iniciar
 loadDropdown();

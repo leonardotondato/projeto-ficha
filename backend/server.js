@@ -58,6 +58,24 @@ app.get('/get-data/:id', async (req, res) => {
     }
 });
 
+// Rota para deletar um usuário pelo ID
+app.delete('/delete-data/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        const result = await pool.query('DELETE FROM charactersheet WHERE id = $1 RETURNING *', [id]);
+        
+        if (result.rowCount === 0) {
+            return res.status(404).json({ error: 'Usuário não encontrado.' });
+        }
+
+        res.json({ message: 'Usuário deletado com sucesso', deletedUser: result.rows[0] });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Erro ao deletar o usuário.' });
+    }
+});
+
+
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
